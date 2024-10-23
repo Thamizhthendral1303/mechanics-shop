@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="spareparts.html">Spare Parts</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin-login.html" class="admin-login-btn">Admin Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Feedback Form</h2>
+        <form onsubmit="storeFeedback(); return false;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Mechanics Shop</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

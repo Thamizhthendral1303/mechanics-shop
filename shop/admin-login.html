@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Mechanics Shop</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+            <label for="admin-id">Admin ID:</label>
+            <input type="text" id="admin-id" required>
+            
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" required>
+            
+            <button type="submit">Login</button>
+            <p id="login-error" style="color: red; display: none;">Invalid login credentials. Please try again.</p>
+        </form>
+    </div>
+
+    <script>
+        // Hardcoded admin login credentials
+        const adminID = "admin";
+        const adminPassword = "password123";
+
+        document.getElementById('admin-login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const enteredID = document.getElementById('admin-id').value;
+            const enteredPassword = document.getElementById('admin-password').value;
+
+            if (enteredID === adminID && enteredPassword === adminPassword) {
+                window.location.href = "admin-dashboard.html"; // Redirect to admin dashboard
+            } else {
+                document.getElementById('login-error').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spare Parts</title>
+    <link rel="stylesheet" href="sparestyles.css">
+</head>
+<body>
+    <header>
+        <h1>Spare Parts</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="spareparts.html">Spare Parts</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin-login.html" class="admin-login-btn">Admin Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Available Parts</h2>
+        <div class="parts-list">
+            <div class="part-item">
+                <img src="images/carengineimage.jpg" alt="Car Engine" class="product-image">
+                <button onclick="addToCart('Car Engine', 1000)">Add Car Engine - Rs.1000</button>
+            </div>
+            <div class="part-item">
+                <img src="images/bike-chain-image.jpg" alt="Bike Tire" class="product-image">
+                <button onclick="addToCart('Bike Tire', 500)">Add Bike Tire - Rs.500</button>
+            </div>
+            <div class="part-item">
+                <img src="images/car-brake-padiamge.jpg" alt="Brake Pad" class="product-image">
+                <button onclick="addToCart('Brake Pad', 300)">Add Brake Pad - Rs.300</button>
+            </div>
+            <div class="part-item">
+                <img src="images\carbatteryimage.jpg" alt="Car Battery" class="product-image">
+                <button onclick="addToCart('Car Battery', 4000)">Add Car Battery - Rs.4000</button>
+            </div>
+            <div class="part-item">
+                <img src="images\bikespark.jpg" alt="Spark Plug" class="product-image">
+                <button onclick="addToCart('Spark Plug', 200)">Add Spark Plug - Rs.200</button>
+            </div>
+            <div class="part-item">
+                <img src="images\oilfilter.jpg" alt="Oil Filter" class="product-image">
+                <button onclick="addToCart('Oil Filter', 150)">Add Oil Filter - Rs.150</button>
+            </div>
+            <div class="part-item">
+                <img src="images\airfilterimage.jpg" alt="Air Filter" class="product-image">
+                <button onclick="addToCart('Air Filter', 250)">Add Air Filter - Rs.250</button>
+            </div>
+            <div class="part-item">
+                <img src="images\breakfluidimage.jpg" alt="Brake Fluid" class="product-image">
+                <button onclick="addToCart('Brake Fluid', 100)">Add Brake Fluid - Rs.100</button>
+            </div>
+            <div class="part-item">
+                <img src="images\cartireimage" alt="Car Tire" class="product-image">
+                <button onclick="addToCart('Car Tire', 3500)">Add Car Tire - Rs.3500</button>
+            </div>
+            <div class="part-item">
+                <img src="images\engineoilimage.jpg" alt="Engine Oil" class="product-image">
+                <button onclick="addToCart('Engine Oil', 800)">Add Engine Oil - Rs.800</button>
+            </div>
+            <div class="part-item">
+                <img src="images\car-exhaust-pipe.jpg" alt="Exhaust Pipe" class="product-image">
+                <button onclick="addToCart('Exhaust Pipe', 1200)">Add Exhaust Pipe - Rs.1200</button>
+            </div>
+            <div class="part-item">
+                <img src="images\radiatorimage.jpg" alt="Radiator" class="product-image">
+                <button onclick="addToCart('Radiator', 2500)">Add Radiator - Rs.2500</button>
+            </div>
+            <div class="part-item">
+                <img src="images\fuel car.jpg" alt="Fuel Pump" class="product-image">
+                <button onclick="addToCart('Fuel Pump', 1500)">Add Fuel Pump - Rs.1500</button>
+            </div>
+            <div class="part-item">
+                <img src="images/gearbox.jpg" alt="Gearbox" class="product-image">
+                <button onclick="addToCart('Gearbox', 7000)">Add Gearbox - Rs.7000</button>
+            </div>
+            <div class="part-item">
+                <img src="images\shake absorber.jpg" alt="Shock Absorber" class="product-image">
+                <button onclick="addToCart('Shock Absorber', 900)">Add Shock Absorber - Rs.900</button>
+            </div>
+            <div class="part-item">
+                <img src="images\steering.jpg" alt="Steering Wheel" class="product-image">
+                <button onclick="addToCart('Steering Wheel', 600)">Add Steering Wheel - Rs.600</button>
+            </div>
+            <div class="part-item">
+                <img src="images/headlight.jpg" alt="Headlight" class="product-image">
+                <button onclick="addToCart('Headlight', 1200)">Add Headlight - Rs.1200</button>
+            </div>
+            <div class="part-item">
+                <img src="images\horn.jpg" alt="Headlight" class="product-image">
+                <button onclick="addToCart('Headlight', 1200)">Add Horn - Rs.1200</button>
+            </div>
+        </div>
+
+        <h2>Shopping Cart</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <h3 id="total-price">Total: Rs.0</h3>
+        <button id="submit-cart" onclick="submitCart()">Submit</button>
+    </main>
+    <footer>
+        <p>© 2024 Mechanics Shop</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
